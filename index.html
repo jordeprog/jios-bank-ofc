@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>🏦 Jios Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>🏦 Jios Bank</h1>
+
+    <!-- LOGIN -->
+    <div id="login">
+      <input type="text" id="username" placeholder="Usuário">
+      <input type="password" id="password" placeholder="Senha">
+      <button onclick="login()">Entrar</button>
+      <p id="loginMsg" class="msg"></p>
+      <footer>Feito com ❤️ por Copilot</footer>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" style="display:none;">
+
+      <button id="logoutBtn" onclick="logout()">Sair</button>
+
+      <h2 id="welcome"></h2>
+      <p id="saldoInfo"></p>
+
+      <!-- PAINEL DE ADMIN -->
+      <div id="adminPanel" style="display:none;">
+        <h3>Administração</h3>
+
+        <input type="text" id="newUser" placeholder="Novo usuário">
+        <input type="password" id="newPass" placeholder="Senha">
+        <input type="number" id="newSaldo" placeholder="Saldo inicial">
+        <button onclick="criarUsuario()">Criar usuário</button><br>
+
+        <input type="text" id="delUser" placeholder="Usuário para excluir">
+        <button onclick="excluirUsuario()">Excluir usuário</button><br>
+
+        <input type="text" id="editUser" placeholder="Usuário para editar">
+        <input type="number" id="editSaldo" placeholder="Novo saldo">
+        <button onclick="editarSaldo()">Editar saldo</button>
+      </div>
+
+      <!-- TRANSFERÊNCIA -->
+      <h3>Transferência</h3>
+      <input type="text" id="destino" placeholder="Usuário destino">
+      <input type="number" id="valor" placeholder="Valor">
+      <button onclick="transferir()">Transferir</button>
+      <p id="transferMsg" class="msg"></p>
+
+      <!-- HISTÓRICO -->
+      <h3>Histórico</h3>
+      <ul id="historico"></ul>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
